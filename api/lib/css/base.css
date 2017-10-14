@@ -1,0 +1,53 @@
+body,h1,h2,h3,h4,h5,h6,ul,li,ol,li,dl,dt,dd,p{
+    margin:0;padding:0;
+}
+ul,li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+img{
+    border:0 none;
+    display:block;
+}
+.box{
+    width:100%;
+    min-width:1200px;
+}
+.container{
+    width:1200px;
+    margin:0 auto;
+}
+/*兼容到IE8只能写一个冒号*/
+.clearfix::after{
+    content:"";
+    display:block;
+    height:0;
+    clear:both;
+    overflow:hidden;
+    visibility:hidden;
+    zoom:1;
+}
+input{
+    padding:0;
+    outline: none;
+}
+i{
+    /*position:absolute;*/
+    /*display:block;*/
+}
+*{
+    box-sizing:border-box;
+}
+body{
+    font-size:12px;
+    font-family: "微软雅黑";
+}
+nav{
+    min-height:434px;
+    float:left;
+}
+article{
+  overflow:hidden;
+}
