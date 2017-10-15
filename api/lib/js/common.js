@@ -22,4 +22,18 @@
 $(function($){
     $('#Head').load('../../common.html #header');
     $('#Main_nav').load('../../common.html #main_nav');
+
+
+
+    console.log($('.menu'));
+    var $menu = $('.menu');
+    $menu.eq(0).show().siblings('.menu').hide();
+    $('.hander').on('click', 'button', function(){
+        $(this).toggleClass('btn-primary').siblings('button').removeClass('btn-primary');
+        var index = $(this).index();
+
+        $menu.eq(index).show().siblings('.menu').hide();
+    });
+
+
 });
