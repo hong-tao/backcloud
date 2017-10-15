@@ -29,7 +29,7 @@ $(function($){
     var $menu = $('.menu');
     $menu.eq(0).show().siblings('.menu').hide();
     $('.hander').on('click', 'button', function(){
-        $(this).toggleClass('btn-primary').siblings('button').removeClass('btn-primary');
+        $(this).addClass('btn-primary').siblings('button').removeClass('btn-primary');
         var index = $(this).index();
 
         $menu.eq(index).show().siblings('.menu').hide();
