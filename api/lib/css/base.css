@@ -51,3 +51,19 @@ nav{
 article{
   overflow:hidden;
 }
+article .gongNeng .hander{
+    text-align: center;
+    padding:20px 0 0 10px;
+}
+article .menu{
+    padding:30px;
+    /*display:none;*/
+}
+article .menu form .form-group{
+    margin-right:60px;
+    margin-top:10px;
+}
+article .button{
+    margin-top:5px;
+    padding-left:831px;
+}
