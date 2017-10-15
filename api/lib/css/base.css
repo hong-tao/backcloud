@@ -41,11 +41,11 @@ i{
     box-sizing:border-box;
 }
 body{
-    font-size:12px;
+    font-size:14px;
     font-family: "微软雅黑";
 }
 nav{
-    min-height:434px;
+    height:700px;
     float:left;
 }
 article{
