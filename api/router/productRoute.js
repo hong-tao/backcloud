@@ -7,9 +7,9 @@ var apiResult = require('../ApiResult.js');
 module.exports = {
     Register: function(app){
         app.post("/productAdd", urlencode, function(request, response){
-            db.select("product", {username: request.body.username}, function(result){
+            db.insert("product", request.body, function(result){
                 console.log(result);
-                if(!result.status){
+                /*if(!result.status){
                     response.send(apiResult(false, null, error));
                 } else if(result.data.length > 0) {
                     response.send(apiResult(false, null, "当前用户已存在"));
@@ -17,7 +17,8 @@ module.exports = {
                     db.insert("user", request.body, function(result){
                         response.send(apiResult(true, request.body, "注册成功"));
                     })
-                }
+                }*/
+
             })
         });
         
