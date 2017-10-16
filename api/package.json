@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "APIresult.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-<<<<<<< HEAD
-  "author": "cqy",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
@@ -20,8 +22,4 @@
     "socket.io": "^2.0.3",
     "ws": "^3.2.0"
   }
-=======
-  "author": "",
-  "license": "ISC"
->>>>>>> fca61710ed26d6355e14fd6345845d78383a9463
 }
