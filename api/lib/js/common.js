@@ -25,7 +25,7 @@ $(function($){
 
 
 
-    console.log($('.menu'));
+    // console.log($('.menu'));
     var $menu = $('.menu');
     $menu.eq(0).show().siblings('.menu').hide();
     $('.hander').on('click', 'button', function(){
@@ -34,6 +34,4 @@ $(function($){
 
         $menu.eq(index).show().siblings('.menu').hide();
     });
-
-
 });
