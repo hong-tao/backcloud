@@ -1,4 +1,8 @@
 var userRouter = require('./UserRouter.js');
+var productRouter = require('./ProductRoute.js');
+
+// 所有的路由映射表
+var allRouter = Object.assign({}, userRouter, productRouter);
 
 module.exports = {
     Register: function(express){
@@ -17,10 +21,11 @@ module.exports = {
             }
         });
 
-        app.listen(888);
+        app.listen(88);
         
         app.use(express.static(__dirname + '/'));
 
-        userRouter.Register(app);
+        allRouter.Register(app);
+        // productRouter.Register(app);
     }
 }
