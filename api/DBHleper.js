@@ -1,6 +1,6 @@
 var mongodb = require('mongodb');
 var dbServer = new mongodb.Server('10.3.131.16', 27017);
-var db = new mongodb.Db('test1705candel', dbServer);
+var db = new mongodb.Db('supermarket', dbServer);
 var apiResult = require('./ApiResult.js');
 
 module.exports = {
