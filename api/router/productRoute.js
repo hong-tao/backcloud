@@ -21,7 +21,7 @@ module.exports = {
             })
         });
         
-        /*app.post("/login", urlencode, function(request, response){
+        app.post("/login", urlencode, function(request, response){
             db.select("user", request.body, function(result){
                 console.log(result);
                 if(!result.status){
@@ -34,6 +34,6 @@ module.exports = {
                     response.send(apiResult(false, null, "用户名和密码不匹配"));
                 }
             })
-        })*/
+        })
     }
 }

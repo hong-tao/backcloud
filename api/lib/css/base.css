@@ -73,3 +73,31 @@ article .button{
     border-bottom: 5px dashed #ddd;
 }
 table.table{margin-top: 20px;padding-top: 20px;}
+#login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#login form{
+    margin-top: 200px;
+    width: 450px;
+    height: 300px;
+}
+#register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#register form{
+    margin-top: 200px;
+    width: 450px;
+    height: 300px;
+}
+.typeName{
+    width: 160px;
+    float: left;
+}
+.regist{
+    margin-left:160px;
+    float: right;
+}

@@ -1,5 +1,6 @@
 var mongodb = require('mongodb');
-var dbServer = new mongodb.Server('10.3.131.16', 27017);
+// var dbServer = new mongodb.Server('10.3.131.16', 27017);
+ var dbServer = new mongodb.Server('localhost', 27017);
 var db = new mongodb.Db('supermarket', dbServer);
 var apiResult = require('./ApiResult.js');
 
@@ -25,7 +26,9 @@ module.exports = {
         })
     },
     select: function(_collection, _condition, _callback){
+
         db.open(function(error, db){
+
             if(error){
                 _callback(apiResult(false, null, error));
                 return false;
@@ -36,6 +39,7 @@ module.exports = {
                     return false;
                 }
                 collection.find(_condition || {}).toArray(function(error, dataset){
+                    console.log(dataset);
                     if(error){
                         _callback(apiResult(false, null, error));
                         return false;
