@@ -6,7 +6,7 @@ var apiResult = require('../ApiResult.js');
 
 module.exports = {
     Register: function(app){
-        app.post("/productAdd", urlencode, function(request, response){
+        app.post("/register", urlencode, function(request, response){
             db.select("user", {username: request.body.username}, function(result){
                 console.log(result);
                 if(!result.status){
@@ -20,8 +20,8 @@ module.exports = {
                 }
             })
         });
-        
-        /*app.post("/login", urlencode, function(request, response){
+
+        app.post("/login", urlencode, function(request, response){
             db.select("user", request.body, function(result){
                 console.log(result);
                 if(!result.status){
@@ -34,6 +34,6 @@ module.exports = {
                     response.send(apiResult(false, null, "用户名和密码不匹配"));
                 }
             })
-        })*/
+        })
     }
 }
