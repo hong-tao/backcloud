@@ -22,4 +22,5 @@
 $(function($){
     $('#Head').load('../../common.html #header');
     $('#Main_nav').load('../../common.html #main_nav');
+    
 });

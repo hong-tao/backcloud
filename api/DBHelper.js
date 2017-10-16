@@ -17,7 +17,7 @@ module.exports = {
                     return false;
                 }
                 collection.insert(_data);
-                _callback(apiResult(true, _data, message));
+                _callback(apiResult(true, _data));
 
                 db.close();
             })
@@ -47,6 +47,21 @@ module.exports = {
             })
         })
     },
-    update: function(){},
+    update: function(_collection, _condition, _callback){
+        db.open(function(error, db){
+            if(error){
+                _callback(false, null, error);
+                return false;
+            }
+            collection(_collection, function(error, collection){
+                if(error){
+                    _callback(apiResult(false, null, error));
+                    return false;
+                }
+                // 没写完的
+                collection.update()
+            })
+        })
+    },
     delete: function(){}
 }
