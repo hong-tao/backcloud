@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "APIresult.js",
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
   "author": "",
+  "license": "ISC"
+=======
+=======
+>>>>>>> 791d0294b00147ea6b9fdb21d1a5c92183fbd734
+  "author": "cqy",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
@@ -22,4 +26,12 @@
     "socket.io": "^2.0.3",
     "ws": "^3.2.0"
   }
+<<<<<<< HEAD
+>>>>>>> d86bd25d5e3156cbca827dd0ef92225eae54fbfd
+=======
+=======
+  "author": "",
+  "license": "ISC"
+>>>>>>> fca61710ed26d6355e14fd6345845d78383a9463
+>>>>>>> 791d0294b00147ea6b9fdb21d1a5c92183fbd734
 }
