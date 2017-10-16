@@ -16,46 +16,39 @@
     <main id="Main" class="clearfix">
         <nav id="Main_nav"></nav>
         <article id="main_content">
-         <!--    <div class="gongNeng">
-                <div class="hander">
-                    <button type="button" class="btn btn-primary btn-lg active">增加供应商</button>
-                    <button type="button" class="btn btn-default btn-lg active">修改供应商</button>
-                    <button type="button" class="btn btn-default btn-lg active">查询/删除供应商</button>
-                </div>      
-            </div> -->
             <div class="menu">
                 <form class="form-inline">
                     <div class="form-group">
                         <label for="productType">供应商类别：</label>
-                        <input type="text" class="form-control" id="productType" placeholder="供应商类别">
+                        <input type="text" class="form-control" id="supplierType" placeholder="供应商类别">
                     </div>
                     <div class="form-group">
                         <label for="productName">供应商名称：</label>
-                        <input type="text" class="form-control" id="productName" placeholder="供应商名称">
+                        <input type="text" class="form-control" id="supplierName" placeholder="供应商名称">
                     </div>
                     <div class="form-group">
                         <label for="productDes">供应商职务：</label>
-                        <input type="text" class="form-control" id="productDes" placeholder="供应商职务">
+                        <input type="text" class="form-control" id="supplierIden" placeholder="供应商职务">
                     </div>
                     <div class="form-group">
                         <label for="SalePrice">供应商联系方式：</label>
-                        <input type="text" class="form-control" id="SalePrice" placeholder="供应商联系方式">
+                        <input type="text" class="form-control" id="supplierPhone" placeholder="供应商联系方式">
                     </div>
                     <div class="form-group">
                         <label for="purPrice">供应商公司：</label>
-                        <input type="text" class="form-control" id="purPrice" placeholder="供应商公司">
+                        <input type="text" class="form-control" id="supplierCom" placeholder="供应商公司">
                     </div>
                    
                     <div class="button">
                         <button type="button" class="btn btn-default" id="addSupplier">增加</button>
-                        <button type="button" class="btn btn-default" id="addSupplier">删除</button>
-                        <button type="button" class="btn btn-default" id="addSupplier">查询</button>
-                        <button type="button" class="btn btn-default" id="addSupplier">修改</button>
+                        <button type="button" class="btn btn-default" id="remSupplier">删除</button>
+                        <button type="button" class="btn btn-default" id="selSupplier">查询</button>
+                        <button type="button" class="btn btn-default" id="delSupplier">修改</button>
                     </div>
                 </form>            
             </div>  
             <div class="list">
-                <table class="table table-hover table-bordered">
+                <table class="table table-hover table-bordered" >
                     <thead>
                         <tr>
                             <th>编号</th>
@@ -64,40 +57,13 @@
                             <th>供应商职务</th>
                             <th>供应商联系方式</th>
                             <th>供应商公司</th>
-                            <th>上架状态</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>@fat</td>
-                            <td>@fat</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
-                        </tr>
+                    <tbody id="tablelist">
                     </tbody>
                 </table>
-            </div>         
+            </div>
+            <button class="btn btn-success" id="loadMore">加载更多...</button>        
         </article>
     </main>
     <footer></footer>
