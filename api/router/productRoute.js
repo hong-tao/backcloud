@@ -7,7 +7,7 @@ var apiResult = require('../ApiResult.js');
 module.exports = {
     Register: function(app){
         app.post("/productAdd", urlencode, function(request, response){
-            db.select("user", {username: request.body.username}, function(result){
+            db.select("product", {username: request.body.username}, function(result){
                 console.log(result);
                 if(!result.status){
                     response.send(apiResult(false, null, error));
