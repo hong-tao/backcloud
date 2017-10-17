@@ -66,7 +66,6 @@ module.exports = {
                         _callback(apiResult(false, null, error));
                         return false;
                     }
-                    var totalpage = Math.ceil(dataset.data.length)
                     _callback(apiResult(true, dataset, error));
                 });
                 db.close(); 
