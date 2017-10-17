@@ -63,5 +63,27 @@ module.exports = {
             })
         })
     },
-    delete: function(){}
+    delete: function(_collection, _condition, _callback){
+        db.open(function(error, db){
+            if(error){
+                _callback(apiResult(false, null, error));
+                return false;
+            }
+            db.collection(_collection, function(error, collection){
+                if(error){
+                    _callback(apiResult(false, null, error));
+                    return false;
+                }
+                collection.remove(_condition, function(error, dataset){
+                    if(error){
+                        _callback(apiResult(false, null, "删除错误"));
+                        return false;
+                    }
+                    _callback(apiResult(true, dataset, "删除成功"));
+                })
+                db.close();
+                
+            })
+        })
+    }
 }

@@ -6,6 +6,7 @@ var apiResult = require('../ApiResult.js');
 
 module.exports = {
     Register: function(app){
+        // 增加商品
         app.post("/addProduct", urlencode, function(request, response){
             // console.log(request.body);
             db.select("product", {proBarCode: request.body.proBarCode}, function(result){
@@ -26,7 +27,23 @@ module.exports = {
             })
             
         });
-        
+        // 删除商品
+        app.post("/delProduct", urlencode, function(request, response){
+            var doc = {};
+            if (request.body) {
+                doc = request.body;
+            }
+            var mongodb = require('mongodb');
+            var obj_id = new mongodb.ObjectID.createFromHexString(doc._id);
+            db.delete("product", {"_id":obj_id}, function(result){
+                if(!result.status){
+                    response.send(apiResult(false, null, "删除错误"));
+                    return false;
+                }
+                response.send(apiResult(true, request.body, "删除成功"));
+            });
+        });
+        // 查询商品
         app.post("/selectProduct", urlencode, function(request, response){
             console.log(request.body);
             var obj = {};
@@ -52,7 +69,7 @@ module.exports = {
                 }
             })
         });
-        
+        // 所有商品
         app.post("/allProduct", urlencode, function(request, response){
             db.select("product", {}, function(result){
                 // console.log(result);
